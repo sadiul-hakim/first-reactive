@@ -17,8 +17,7 @@ public class StudentService {
     }
 
     public Flux<Student> findAll() {
-        return studentRepo.findAll()
-                .delayElements(Duration.ofSeconds(1));
+        return studentRepo.findAll();
     }
 
     public Flux<Student> findAllByFirstname(String firstname) {
